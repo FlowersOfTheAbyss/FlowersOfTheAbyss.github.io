@@ -40,23 +40,34 @@
     * { margin:0; padding:0; }
     html, body { width:100%; height:100%; overflow:hidden; background-color:#000; }
     @font-face{ font-family: Pixel; src: url('04B30.TTF'); }
-    .intro
+    .intro-img
     {
+        z-order:0;
         width:100%;
         height:100%;
         position:absolute;
         top:50%;
         left:50%;
         transform:translate(-50%,-50%);
-        background-image: url("intro.png");
+    }
+    .intro-div
+    {
+        z-order:1;
+        width:100%;
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
         font-family: Pixel, sans-serif;
+        font-size: 1vh;
     }
     </style>
 
 </head>
 <body>
-    <div class="intro">
+    <div class="intro-div">
         Flowers of the Abyss
     </div>
+    <img class="intro-img" src="intro.png" />
 </body>
 </html>
