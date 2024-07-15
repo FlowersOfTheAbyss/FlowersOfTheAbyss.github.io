@@ -73,10 +73,13 @@
 </head>
 <body>
     <audio loop id="intro-audio"><source src="lusthuset.ogg" type="audio/ogg"></audio>
-    <div class="audio-div" onclick="document.getElementById('intro-audio').play()"></div>
-    <img class="intro-bg" src="intro.png" />
-    <div class="intro-title">
+    <div onclick="sA()" class="audio-div"></div>
+    <img onclick="sA()" class="intro-bg" src="intro.png" />
+    <div onclick="sA()" class="intro-title">
         Flowers of the Abyss
     </div>
+    <script>
+        function sA(){document.getElementById('intro-audio').play();}
+    </script>
 </body>
 </html>
