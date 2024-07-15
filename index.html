@@ -38,11 +38,9 @@
     @font-face{ font-family: Pixel; src: url('04B30.TTF'); }
     .audio-div
     {
-        background-color:#000;
-        background-image:url('intro.png');
-        z-order:2;
+        z-index:2;
         width:100%;
-        height:100%
+        height:100%;
         left:0;
         top:0;
         position:fixed;
@@ -50,7 +48,7 @@
     }
     .intro-bg
     {
-        z-order:0;
+        z-index:0;
         width:100%;
         position:absolute;
         top:50%;
@@ -60,7 +58,7 @@
     }
     .intro-title
     {
-        z-order:1;
+        z-index:1;
         width:100%;
         position:absolute;
         top:50%;
@@ -76,8 +74,8 @@
 </head>
 <body>
     <audio loop id="intro-audio"><source src="lusthuset.ogg" type="audio/ogg"></audio>
-    <img onclick="sA()" class="intro-bg" src="intro.png" />
-    <div onclick="sA()" class="intro-title">Flowers of the Abyss</div>
+    <img class="intro-bg" src="intro.png" />
+    <div class="intro-title">Flowers of the Abyss</div>
     <div onclick="sA()" class="audio-div"></div>
     <script>
         function sA(){document.getElementById('intro-audio').play();}
